@@ -6,6 +6,9 @@ import { data } from "../data/data";
 
 export function findPlanetNameByMoon(data, moonName) {
   // Your code goes here...
+  const planets = data.planets;
+  const planetWithUniqueMoon = planets.find( x => x.moons.find( x => x === moonName ) === moonName );
+  return planetWithUniqueMoon.name;
 }
 
 
